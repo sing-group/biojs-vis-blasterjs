@@ -27,6 +27,8 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    
+    <!-- Fileinput CSS -->
     <link href="css/fileinput.min.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -251,8 +253,12 @@
                     <div style="text-align:right">
                         <p><a style="color: #2c3e50;" target="_blank" download="blast.out" href="blast.out">Download an example blast output file</a></p>
                     </div>
-                    <div style="text-align: left;" id="blast-multiple-alignments"></div>
-                    <div style="text-align: left;" id="blast-alignments-table"></div>
+                    <div class="scroll-x">
+                        <div style="text-align: left;" id="blast-multiple-alignments"></div>
+                    </div>
+                    <div class="scroll-x">
+                        <div style="text-align: left;" id="blast-alignments-table"></div>
+                    </div>
                     <div style="text-align: left;" id="blast-single-alignment"></div>
                 </div>
             </div>

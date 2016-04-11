@@ -529,6 +529,16 @@ div#loader-container{
     text-align:center; 
 }
 
+.scroll-x{
+    overflow-x: scroll;
+}
+
+@media (min-width: 768px) {
+    .scroll-x{
+        overflow-x: hidden;
+    }
+}
+
 .loader,
 .loader:before,
 .loader:after {

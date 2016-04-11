@@ -479,6 +479,7 @@ function createAlignmentComparison(alignments, queryLenght, colored){
     container.appendChild(input);    
     containerButtons.style.textAlign = 'right';
     containerButtons.id              = 'blast-multiple-alignments-buttons';
+    blastDiv.style.minWidth        = '580px';
     containerButtons.appendChild(buttonColors); 
     containerButtons.appendChild(buttonDownload);   
     container.appendChild(containerButtons);
