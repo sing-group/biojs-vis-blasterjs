@@ -225,12 +225,25 @@ function createAlignmentDiv(color, width1, width2, alignment){
     div2.onmouseout            = function(){document.getElementById('defline').value=' Mouse over to show defline and scores, click to show alignments';};
     div2.onmouseover           = function(){document.getElementById('defline').value=' '+alignment.description+'. S='+alignment.score+' E='+alignment.eValue;};
     divClear.style.clear = 'both';
-    a.href = '#'+alignment.description.split(' ')[0];
+    a.href = '#'+alignment.description.split(' ')[0];  
+    a.onclick=function(){ selectAlignment(alignment.description.split(' ')[0]); };
     a.appendChild(div2);
     container.appendChild(div1);
     container.appendChild(a);
     container.appendChild(divClear);
     return container;
+}
+
+function selectAlignment(alignment){
+    var item = document.getElementById(alignment).parentElement.parentElement;
+    var items = document.getElementsByClassName('alignment-table-description');
+    var i;
+    for (i = 0; i < items.length; i++) {
+        items[i].style.fontWeight = 'normal';
+        items[i].parentElement.parentElement.style.fontWeight = 'normal';
+    }
+    item.style.fontWeight = 'bold';
+    document.getElementById(alignment).style.fontWeight = 'bold';
 }
 
 function createColorsDiv(colored){
@@ -556,6 +569,7 @@ function createAlignmentTable(alignments){
         butDesc.style.padding = 0;
         butDesc.style.display = 'inline';
         butDesc.style.background = 'none';
+        butDesc.className = 'alignment-table-description';
         tdDesc.appendChild(butDesc);
         var tdScore       = document.createElement('td');
         tdScore.innerHTML = alignments[i].score;
@@ -582,6 +596,12 @@ function createAlignmentTable(alignments){
 }
 
 function downloadTableImg(){
+    var items = document.getElementsByClassName('alignment-table-description');
+    var i;
+    for (i = 0; i < items.length; i++) {
+        items[i].style.fontWeight = 'normal';
+        items[i].parentElement.parentElement.style.fontWeight = 'normal';
+    }
     var container = document.getElementById('blast-alignments-table-img');
     html2canvas(container, {
       onrendered: function(canvas) {
