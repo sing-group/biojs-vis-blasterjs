@@ -67,6 +67,15 @@ function getQueryLenght(content){
 
 function getAlignments(content){
     var lines = content.split('\n');
+    return parseBlast(content);  
+}
+
+function parseBlastN(content){
+    parseBlast(content);
+}
+    
+function parseBlast(content){
+    var lines = content.split('\n');
     var alignments = [];
     for (var i = 0; i < lines.length; i++){
         if(lines[i].startsWith('>')){
@@ -83,11 +92,23 @@ function getAlignments(content){
             }
             var description  = line1;
             var length       = line2.split('=')[1];
+            
+            if(lines[currentLine+2].startsWith(' Features in this part of subject sequence:')){                
+                currentLine = currentLine+3;
+            }
             var score        = lines[currentLine+2].split(',')[0].split(' ')[3];
             var eValue       = lines[currentLine+2].split(',')[1].split(' ')[4];
             var identities   = lines[currentLine+3].split(',')[0].split('(')[1].substr(0, lines[currentLine+3].split(',')[0].split('(')[1].length-2);
-            var positives    = lines[currentLine+3].split(',')[1].split('(')[1].substr(0, lines[currentLine+3].split(',')[1].split('(')[1].length-2);
-            var gaps         = lines[currentLine+3].split(',')[2].split('(')[1].substr(0, lines[currentLine+3].split(',')[2].split('(')[1].length-2);
+            if(lines[0].startsWith('BLASTN')){
+                var positives = 'N/A';
+                var gaps    = lines[currentLine+3].split(',')[1].split('(')[1].substr(0, lines[currentLine+3].split(',')[1].split('(')[1].length-2);
+            }else{
+                var positives    = lines[currentLine+3].split(',')[1].split('(')[1].substr(0, lines[currentLine+3].split(',')[1].split('(')[1].length-2);
+                var gaps         = lines[currentLine+3].split(',')[2].split('(')[1].substr(0, lines[currentLine+3].split(',')[2].split('(')[1].length-2);
+            }
+            if(lines[currentLine+4].split(',')[0].split(' ')[1] == 'Frame' || lines[currentLine+4].startsWith(' Strand')){
+                currentLine = currentLine+1;   
+            }
             var queryStart = lines[currentLine+5].substring(5).replace(/^\s+/g, '').split(' ')[0];
             var query = lines[currentLine+5].substring(5).replace(/\s+/g, '').replace(/[0-9]/g, '');
             var queryEnd = lines[currentLine+5].substring(5).replace(/^\s+/g, '').split(' ')[lines[currentLine+5].substring(5).replace(/^\s+/g, '').split(' ').length-1];
@@ -113,7 +134,7 @@ function getAlignments(content){
                 }
                 comparison += nextComparison;
                 currentLine = currentLine+4;
-            }     
+            }   
             
             var alignment = new BlastAlignment( description, length, score, eValue, identities, positives, gaps, queryStart, query, queryEnd, comparison, sbjctStart, sbjct, sbjctEnd );
             alignments.push(alignment);
@@ -389,8 +410,15 @@ function createBody(alignments, queryLenght, container, colored){
     var alignmentContainer = document.createElement('div');
     alignmentContainer.style.paddingBottom = '10px';
     for(var i = 0; i < alignments.length; i++){
-        var white     = parseInt(50+((500*(alignments[i].queryStart-1))/queryLenght));
-        var black     = parseInt(550-white-(500*(queryLenght-alignments[i].queryEnd)/queryLenght));
+        if(parseInt(alignments[i].queryStart)>parseInt(alignments[i].queryEnd)){
+            var queryStart = alignments[i].queryEnd;
+            var queryEnd   = alignments[i].queryStart;
+        }else{
+            var queryStart = alignments[i].queryStart;
+            var queryEnd   = alignments[i].queryEnd;             
+        }
+        var white     = parseInt(50+((500*(queryStart-1))/queryLenght));
+        var black     = parseInt(550-white-(500*(queryLenght-queryEnd)/queryLenght));
         var alignment = createAlignmentDiv(getColor(colored, alignments[i].score), white, black, alignments[i]);
         alignment.style.marginBottom = '4px';
         alignmentContainer.appendChild(alignment);
@@ -578,7 +606,11 @@ function createAlignmentTable(alignments){
         var tdIdent       = document.createElement('td');
         tdIdent.innerHTML = alignments[i].identities+"%";
         var tdPos       = document.createElement('td');
-        tdPos.innerHTML = alignments[i].positives+"%";
+        if(alignments[i].positives == "N/A"){
+            tdPos.innerHTML = alignments[i].positives;
+        }else{
+            tdPos.innerHTML = alignments[i].positives+"%";
+        }
         var tdGaps       = document.createElement('td');
         tdGaps.innerHTML = alignments[i].gaps+"%";
         tr.appendChild(tdDesc);
