@@ -67,14 +67,10 @@ function getQueryLenght(content){
 
 function getAlignments(content){
     var lines = content.split('\n');
-    return parseBlast(content);  
-}
-
-function parseBlastN(content){
-    parseBlast(content);
+    return parseBlastText(content);  
 }
     
-function parseBlast(content){
+function parseBlastText(content){
     var lines = content.split('\n');
     var alignments = [];
     for (var i = 0; i < lines.length; i++){
