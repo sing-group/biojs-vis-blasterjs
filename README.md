@@ -58,10 +58,11 @@ Fax: +34 988 387 001
 License
 ----
 
-GNU General Public License v3
+[GNU General Public License v3]
 
 
    [http://getbootstrap.com/]: <http://getbootstrap.com/>
    [https://html2canvas.hertzen.com/]: <https://html2canvas.hertzen.com/>
    [© SING - Sistemas Informáticos de Nueva Generación 2015]: <http://sing.ei.uvigo.es/>
    [NCBI BLAST user manual]: <http://www.ncbi.nlm.nih.gov/books/NBK279675/>
+   [GNU General Public License v3]: <https://github.com/abmiguez/blasterjs/blob/master/LICENSE>
