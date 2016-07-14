@@ -1,4 +1,5 @@
 biojs-vis-blasterjs
+=====
 
 ### Version
 0.1.1 (July 2016)
@@ -22,25 +23,28 @@ BLAST output files -outfmt 0 (Default)
 ## Getting Started
 Install the module with: `npm install biojs-vis-blasterjs`
 
-```javascript
-var blasterjs = require('biojs-vis-blasterjs');
-blasterjs.hello("biojs"); // "hello biojs"
+```html
+<head>
+    ...
+</head>
+<body>
+    ...
+    <input type="file" id="blastinput" />
+    <div id="blast-multiple-alignments"></div>
+    <div id="blast-alignments-table"></div>
+    <div id="blast-single-alignment"></div>
+    ...
+    <script type="text/javascript">
+      var blasterjs = require("biojs-vis-blasterjs");
+      var instance = new blasterjs({
+         input: "blastinput",
+         multipleAlignments: "blast-multiple-alignments",
+         alignmentsTable: "blast-alignments-table",
+         singleAlignment: "blast-single-alignment"
+      });
+    </script>
+</body>
 ```
-
-## Documentation
-
-#### .hello(name)
-
-**Parameter**: `name`
-**Type**: `String`
-**Example**: `biojs`
-
-The 'hello' method is responsible for showing a name.
-
-How to use this method
-
-```javascript
-blasterjs.hello('biojs'); // "hello biojs"
 
 ### Institution
 [© SING - Sistemas Informáticos de Nueva Generación 2015]    
