@@ -2,7 +2,7 @@ biojs-vis-blasterjs
 =====
 
 ### Version
-0.1.1 (July 2016)
+0.1.2 (July 2016)
 
 ### Authors
 * Aitor Blanco Míguez (aiblanco@uvigo.es)
