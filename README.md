@@ -1,68 +1,64 @@
-BlasterJS
-=====
+# biojs-vis-blasterjs
 
-### Version
-1.0 (July 2016)
+[![NPM version](http://img.shields.io/npm/v/biojs-vis-blasterjs.svg)](https://www.npmjs.org/package/biojs-vis-blasterjs) 
 
-### Authors
-* Aitor Blanco Míguez (aiblanco@uvigo.es)
-* Dr. Anália Maria Garcia Lourenço (analia@uvigo.es)
-* Dr. Borja Sánchez García (borja.sanchez@csic.es)
-* Dr. Florentino Fernández Riverola (riverola@uvigo.es)
+> A free to use, open source Javascript BLAST alignments viewer library created by SING group.
 
-### Description 
-BlasterJS is a free to use, open source JS library created by Sing Group.
+## Getting Started
+Install the module with: `npm install biojs-vis-blasterjs`
 
-### Dependences
-* Bootstrap 3 ([http://getbootstrap.com/])
-* HTML2CANVAS ([http://html2canvas.hertzen.com/])
-
-
-### Accepted files
-BLAST output files -outfmt 0 (Default) 
-> Only one query on the BLAST file.   
-> You can check [NCBI BLAST user manual].
-
-### How to use
-```sh
-<head>
-    ...
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
-</head>
-<body>
-    ...
-    <input type="file" id="blastinput" />
-    <div id="blast-multiple-alignments"></div>
-    <div id="blast-alignments-table"></div>
-    <div id="blast-single-alignment"></div>
-    ...
-    <script type="text/javascript" src="js/html2canvas.js"></script>
-    <script type="text/javascript" src="js/blaster.js"></script>
-</body>
+```javascript
+var blasterjs = require('biojs-vis-blasterjs');
+blasterjs.hello("biojs"); // "hello biojs"
 ```
 
-### Institution
-[© SING - Sistemas Informáticos de Nueva Generación 2015]    
-Department of Computer Science, University of Vigo    
-ESEI - Escuela Superior de Ingeniería Informática Edificio politécnico    
-Campus Universitario As Lagoas s/n    
-32004 Ourense, Spain    
-Tel: +34 988 387 013    
-Fax: +34 988 387 001
+## Documentation
 
-### TODOs
+#### .hello(name)
 
-- Accept more blast output formats.
-- Check BioJS compativility
+**Parameter**: `name`
+**Type**: `String`
+**Example**: `biojs`
 
-License
-----
+The 'hello' method is responsible for showing a name.
 
-[GNU General Public License v3]
+How to use this method
 
+```javascript
+blasterjs.hello('biojs'); // "hello biojs"
+```
 
-   [http://getbootstrap.com/]: <http://getbootstrap.com/>
-   [https://html2canvas.hertzen.com/]: <https://html2canvas.hertzen.com/>
-   [© SING - Sistemas Informáticos de Nueva Generación 2015]: <http://sing.ei.uvigo.es/>
-   [NCBI BLAST user manual]: <http://www.ncbi.nlm.nih.gov/books/NBK279675/>
-   [GNU General Public License v3]: <https://github.com/abmiguez/blasterjs/blob/master/LICENSE>
+## Contributing
+
+All contributions are welcome.
+
+## Support
+
+If you have any problem or suggestion please open an issue [here](https://github.com/sing-group/biojs-vis-blasterjs/issues).
+
+## License 
+
+The MIT License
+
+Copyright (c) 2016, SING - Sistemas Informaticos de Nueva Generacion
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.

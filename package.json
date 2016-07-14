@@ -1,0 +1,42 @@
+{
+  "name": "biojs-vis-blasterjs",
+  "description": "A free to use, open source Javascript BLAST alignments viewer library created by SING group.",
+  "version": "0.1.1",
+  "homepage": "https://sing.ei.uvigo.es/blasterjs",
+  "author": {
+    "name": "SING - Sistemas Informaticos de Nueva Generacion",
+    "email": "aiblanco@uvigo.es"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sing-group/blasterjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sing-group/blasterjs/issues"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+		"test": "echo 'Error: no test specified' && exit 1",
+		"build": "mkdirp build && browserify -r ./:biojs-vis-blasterjs -o build/blasterjs.js",
+		"build-browser": "npm run build",
+		"prepublish": "npm run build",
+		"watch": "watchify -r ./:biojs-vis-blasterjs -v -o build/blasterjs.js",
+		"w": "prunner \"npm run sniper\" \"npm run watch\"",
+		"sniper": "sniper ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+		"mkdirp": "^0.5.0",
+		"browserify": "6.x",
+		"sniper": "0.x",
+		"watchify": "^1.0.6",
+		"prunner": "1.x"
+  }, 
+  "sniper": {
+    "js": [ "/build/blasterjs.js"],
+    "snippets": ["examples"],
+    "first": "simple"
+   }, 
+  "keywords": ["blast","alignment","viewer","blasterjs","biojs"]
+}
