@@ -1,6 +1,6 @@
 {
   "name": "biojs-vis-blasterjs",
-  "description": "A free to use, open source Javascript BLAST alignments viewer library created by SING group.",
+  "description": "BioJS component to display BLAST alignments.",
   "version": "0.1.1",
   "homepage": "https://sing.ei.uvigo.es/blasterjs",
   "author": {
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sing-group/blasterjs.git"
+    "url": "git://github.com/sing-group/biojs-vis-blasterjs.git"
   },
   "bugs": {
-    "url": "https://github.com/sing-group/blasterjs/issues"
+    "url": "https://github.com/sing-group/biojs-vis-blasterjs/issues"
   },
-  "license": "MIT",
+  "license": "GNUGPLv3",
   "main": "lib/index.js",
   "scripts": {
 		"test": "echo 'Error: no test specified' && exit 1",
@@ -36,7 +36,7 @@
   "sniper": {
     "js": [ "/build/blasterjs.js"],
     "snippets": ["examples"],
-    "first": "simple"
+    "first": "example"
    }, 
-  "keywords": ["blast","alignment","viewer","blasterjs","biojs"]
+  "keywords": ["blast","alignments","viewer","blasterjs","blaster"]
 }

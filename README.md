@@ -1,8 +1,23 @@
-# biojs-vis-blasterjs
+biojs-vis-blasterjs
 
+### Version
+0.1.1 (July 2016)
+
+### Authors
+* Aitor Blanco Míguez (aiblanco@uvigo.es)
+* Dr. Anália Maria Garcia Lourenço (analia@uvigo.es)
+* Dr. Borja Sánchez García (borja.sanchez@csic.es)
+* Dr. Florentino Fernández Riverola (riverola@uvigo.es)
+
+### Description 
 [![NPM version](http://img.shields.io/npm/v/biojs-vis-blasterjs.svg)](https://www.npmjs.org/package/biojs-vis-blasterjs) 
 
 > A free to use, open source Javascript BLAST alignments viewer library created by SING group.
+
+### Accepted files
+BLAST output files -outfmt 0 (Default) 
+> Only one query on the BLAST file.   
+> You can check [NCBI BLAST user manual].
 
 ## Getting Started
 Install the module with: `npm install biojs-vis-blasterjs`
@@ -26,39 +41,48 @@ How to use this method
 
 ```javascript
 blasterjs.hello('biojs'); // "hello biojs"
-```
+
+### Institution
+[© SING - Sistemas Informáticos de Nueva Generación 2015]    
+Department of Computer Science, University of Vigo    
+ESEI - Escuela Superior de Ingeniería Informática Edificio politécnico    
+Campus Universitario As Lagoas s/n    
+32004 Ourense, Spain    
+Tel: +34 988 387 013    
+Fax: +34 988 387 001
 
 ## Contributing
-
 All contributions are welcome.
 
 ## Support
-
 If you have any problem or suggestion please open an issue [here](https://github.com/sing-group/biojs-vis-blasterjs/issues).
 
+### TODOs
+
+- Accept more blast output formats.
+
 ## License 
+[GNU General Public License v3]
 
-The MIT License
+BlasterJS is a free to use, open source JS library created by SING Group.
+Copyright (C) 2016  SING - Sistemas Informaticos de Nueva Generacion
 
-Copyright (c) 2016, SING - Sistemas Informaticos de Nueva Generacion
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+
+   [http://getbootstrap.com/]: <http://getbootstrap.com/>
+   [https://html2canvas.hertzen.com/]: <https://html2canvas.hertzen.com/>
+   [© SING - Sistemas Informáticos de Nueva Generación 2015]: <http://sing.ei.uvigo.es/>
+   [NCBI BLAST user manual]: <http://www.ncbi.nlm.nih.gov/books/NBK279675/>
+   [GNU General Public License v3]: <https://github.com/sing-group/biojs-vis-blasterjs/blob/master/LICENSE>
