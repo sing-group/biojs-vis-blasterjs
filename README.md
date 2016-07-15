@@ -26,6 +26,7 @@ Install the module with: `npm install biojs-vis-blasterjs`
 
 ```html
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
     ...
 </head>
 <body>
@@ -35,6 +36,7 @@ Install the module with: `npm install biojs-vis-blasterjs`
     <div id="blast-alignments-table"></div>
     <div id="blast-single-alignment"></div>
     ...
+    <script type="text/javascript" src="js/html2canvas.js"></script>    
     <script type="text/javascript">
       var blasterjs = require("biojs-vis-blasterjs");
       var instance = new blasterjs({
