@@ -1,7 +1,7 @@
 //Simple example
 var blasterjs = require("biojs-vis-blasterjs");
 var a = document.createElement('a');
-a.href='http://localhost/blasterjs/blast.out';
+a.href='http://sing.ei.uvigo.es/blasterjs/blast.out';
 a.setAttribute("target", "_blank");
 a.text='Download an example file';
 a.setAttribute("download", "blast.out");
