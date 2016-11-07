@@ -1,7 +1,7 @@
 {
   "name": "biojs-vis-blasterjs",
   "description": "BioJS component to display BLAST alignments.",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "homepage": "https://sing.ei.uvigo.es/blasterjs",
   "author": {
     "name": "SING - Sistemas Informaticos de Nueva Generacion",

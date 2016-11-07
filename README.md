@@ -1,22 +1,22 @@
 biojs-vis-blasterjs
 =====
 
-### Authors
+## Authors
 * Aitor Blanco Míguez (aiblanco@uvigo.es)
 * Dr. Anália Maria Garcia Lourenço (analia@uvigo.es)
 * Dr. Borja Sánchez García (borja.sanchez@csic.es)
 * Dr. Florentino Fernández Riverola (riverola@uvigo.es)
 
-### Description 
+## Description 
 [![NPM version](http://img.shields.io/npm/v/biojs-vis-blasterjs.svg)](https://www.npmjs.org/package/biojs-vis-blasterjs) 
 
 > A free to use, open source Javascript BLAST alignments viewer library created by SING group.
 
-### Requeriments
+## Requeriments
 * Bootstrap 3 ([http://getbootstrap.com/])
 * HTML2CANVAS ([http://html2canvas.hertzen.com/])
 
-### Accepted files
+## Accepted files
 BLAST output files -outfmt 0 (Default) 
 > Only one query on the BLAST file.   
 > You can check [NCBI BLAST user manual].
@@ -36,7 +36,8 @@ Install the module with: `npm install biojs-vis-blasterjs`
     <div id="blast-alignments-table"></div>
     <div id="blast-single-alignment"></div>
     ...
-    <script type="text/javascript" src="js/html2canvas.js"></script>    
+    <script type="text/javascript" src="js/html2canvas.js"></script>  
+    <script type="text/javascript" src="js/blaster.js"></script>   
     <script type="text/javascript">
       var blasterjs = require("biojs-vis-blasterjs");
       var instance = new blasterjs({
@@ -49,7 +50,42 @@ Install the module with: `npm install biojs-vis-blasterjs`
 </body>
 ```
 
-### Institution
+###Options:
+Get alignments via String:
+```html
+...
+<script type="text/javascript">
+  var alignments = "...";
+
+  var blasterjs = require("biojs-vis-blasterjs");
+  var instance = new blasterjs({
+     string: alignments,
+     multipleAlignments: "blast-multiple-alignments",
+     alignmentsTable: "blast-alignments-table",
+     singleAlignment: "blast-single-alignment",
+  });
+</script>
+...
+```
+
+Define a custom callback on click over alignment table item:
+```html
+...
+<script type="text/javascript">
+  var blasterjs = require("biojs-vis-blasterjs");
+  var instance = new blasterjs({
+     input: "blastinput",
+     multipleAlignments: "blast-multiple-alignments",
+     alignmentsTable: "blast-alignments-table",
+     singleAlignment: "blast-single-alignment",
+     callback: function(alignment) { ... }
+  });
+</script>
+...
+```
+
+
+## Institution
 [© SING - Sistemas Informáticos de Nueva Generación 2015]    
 Department of Computer Science, University of Vigo    
 ESEI - Escuela Superior de Ingeniería Informática Edificio politécnico    
@@ -66,7 +102,7 @@ If you have any problem or suggestion please open an issue [here](https://github
 
 ### TODOs
 
-- Accept more blast output formats.
+- New functionalities
 
 ## License 
 [GNU General Public License v3]
