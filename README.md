@@ -50,8 +50,8 @@ Install the module with: `npm install biojs-vis-blasterjs`
 </body>
 ```
 
-###Options:
-Get alignments via String:
+###Custom options:
+Get alignments via String instead of input form:
 ```html
 ...
 <script type="text/javascript">
@@ -68,7 +68,7 @@ Get alignments via String:
 ...
 ```
 
-Define a custom callback on click over alignment table item:
+Define a custom callback on alignment table item click event:
 ```html
 ...
 <script type="text/javascript">
