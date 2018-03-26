@@ -17,8 +17,7 @@ biojs-vis-blasterjs
 * HTML2CANVAS ([http://html2canvas.hertzen.com/])
 
 ## Accepted files
-BLAST output files -outfmt 0 (Default) 
-> Only one query on the BLAST file.   
+BLAST text output files (-outfmt 0)   
 > You can check [NCBI BLAST user manual].
 
 ## Getting Started
