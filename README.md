@@ -3,9 +3,9 @@ biojs-vis-blasterjs
 
 ## Authors
 * Aitor Blanco Míguez (aiblanco@uvigo.es)
+* Dr. Florentino Fernández Riverola (riverola@uvigo.es)
 * Dr. Anália Maria Garcia Lourenço (analia@uvigo.es)
 * Dr. Borja Sánchez García (borja.sanchez@csic.es)
-* Dr. Florentino Fernández Riverola (riverola@uvigo.es)
 
 ## Description 
 [![NPM version](http://img.shields.io/npm/v/biojs-vis-blasterjs.svg)](https://www.npmjs.org/package/biojs-vis-blasterjs) 
@@ -98,10 +98,6 @@ All contributions are welcome.
 
 ## Support
 If you have any problem or suggestion please open an issue [here](https://github.com/sing-group/biojs-vis-blasterjs/issues).
-
-### TODOs
-
-- New functionalities
 
 ## License 
 [GNU General Public License v3]
