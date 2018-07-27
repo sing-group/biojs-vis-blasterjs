@@ -49,7 +49,7 @@ Install the module with: `npm install biojs-vis-blasterjs`
 </body>
 ```
 
-###Custom options:
+### Custom options:
 Get alignments via String instead of input form:
 ```html
 ...
