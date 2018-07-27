@@ -103,7 +103,7 @@ If you have any problem or suggestion please open an issue [here](https://github
 [GNU General Public License v3]
 
 BlasterJS is a free to use, open source JS library created by SING Group.
-Copyright (C) 2016  SING - Sistemas Informaticos de Nueva Generacion
+Copyright (C) 2018  SING - Sistemas Informaticos de Nueva Generacion
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
