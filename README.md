@@ -17,7 +17,7 @@ biojs-vis-blasterjs
 * HTML2CANVAS ([http://html2canvas.hertzen.com/])
 
 ## Accepted files
-BLAST text output files (-outfmt 0)   
+BLAST text and XML output files (-outfmt 0 and 5)   
 > You can check [NCBI BLAST user manual].
 
 ## Getting Started
