@@ -12,6 +12,9 @@ biojs-vis-blasterjs
 
 > A free to use, open source Javascript BLAST alignments viewer library created by SING group.
 
+## How to cite
+Blanco-Míguez A, Fdez-Riverola F, SánchezB, Lourenço A (2018) BlasterJS: A novel interactive JavaScript visualisation component for BLAST alignment results. PLoS ONE 13(10): e0205286. https://doi.org/10.1371/journal.pone.0205286
+
 ## Requeriments
 * Bootstrap 3 ([http://getbootstrap.com/])
 * HTML2CANVAS ([http://html2canvas.hertzen.com/])
