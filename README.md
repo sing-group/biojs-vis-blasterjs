@@ -124,6 +124,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
    [http://getbootstrap.com/]: <http://getbootstrap.com/>
    [https://html2canvas.hertzen.com/]: <https://html2canvas.hertzen.com/>
-   [© SING - Sistemas Informáticos de Nueva Generación 2015]: <http://sing.ei.uvigo.es/>
+   [© SING - Sistemas Informáticos de Nueva Generación 2019]: <http://sing.ei.uvigo.es/>
    [NCBI BLAST user manual]: <http://www.ncbi.nlm.nih.gov/books/NBK279675/>
    [GNU General Public License v3]: <https://github.com/sing-group/biojs-vis-blasterjs/blob/master/LICENSE>
